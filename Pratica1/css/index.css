@@ -1,0 +1,36 @@
+body{
+    background-color: black;
+    margin: 0;
+}
+
+.container{
+    display: grid;
+    place-items: center;
+    height: 100vh;
+}
+
+.menu{
+    width: 40%;
+    height: 80%;
+    border: 2px solid;
+    border-color: white;
+    border-radius: 5%;
+    background-color: rgb(7, 7, 7);
+    transition: filter 1.5s ease-in-out;
+}
+
+.menu:hover{
+    transition: 1.5s;
+    filter: drop-shadow(0 0 15px rgb(0, 151, 238));
+    animation: brilho 1.5s infinite alternate;
+    animation-delay: 2s;
+
+}
+
+@keyframes brilho{
+    0%{ filter: drop-shadow(0 0 15px rgb(0, 151, 238) );}
+
+    50%{filter: drop-shadow(0 0 20px rgb(0, 151, 238) );}
+
+    100%{filter: drop-shadow(0 0 15px rgb(0, 151, 238) );}
+}
