@@ -1,0 +1,51 @@
+body{
+    background-color: black;
+    margin: 0;
+}
+
+/*CSS DO MENU*/
+
+.menu{ /*CSS DO CONTAINER*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    gap: 20px; /*ESPAÇAMENTO ENTRE OS DOIS CONTAINERS*/
+}
+
+.lateral-esquerda{ /*CSS DA LATERAL ESQUERDA COM A HOVER EMBAIXO*/
+    background-color: rgb(20, 20, 20);
+    border: 2px solid white;
+    border-radius: 5vh;
+    height: 75%; /*Altura*/
+    width: 25%; /*Largura*/
+    transition: filter 1s ease-in-out; /*EFEITO DO SAIR DA LUZ DE FUNDO*/
+}
+.lateral-esquerda:hover{ /*CSS DA ANIMAÇÃO*/
+    filter: drop-shadow(0 0 10px blue);
+    transition: 1s; /*TEMPO PRA COMEÇAR A ANIMAÇÃO*/
+}
+
+.lateral-esquerda button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    border-radius: 10%;
+    height: 15%; /*Altura*/
+    width: 50%; /*Largura*/
+}
+
+
+.menu-principal{ /*CSS DO MENU PRINCIPAL COM A HOVER EMBAIXO*/
+    background-color: rgb(20, 20, 20);
+    border: 2px solid white;
+    border-radius: 5vh;
+    height: 75%; /*Altura*/
+    width: 35%; /*Largura*/
+    transition: filter 1s ease-in-out; /*EFEITO DO SAIR DA LUZ DE FUNDO*/
+}
+.menu-principal:hover{ /*CSS DA ANIMAÇÃO*/
+    filter: drop-shadow(0 0 10px blue);
+    transition: 1s; /*TEMPO PRA COMEÇAR A ANIMAÇÃO*/
+}
