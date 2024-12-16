@@ -20,11 +20,9 @@ body{
 }
 
 .menu:hover{
-    transition: 1.5s;
     filter: drop-shadow(0 0 15px rgb(0, 151, 238));
     animation: brilho 1.5s infinite alternate;
-    animation-delay: 2s;
-
+    animation-delay: 1.75s;
 }
 
 @keyframes brilho{
@@ -33,4 +31,11 @@ body{
     50%{filter: drop-shadow(0 0 20px rgb(0, 151, 238) );}
 
     100%{filter: drop-shadow(0 0 15px rgb(0, 151, 238) );}
+}
+
+.menu:not(:hover) {
+    animation: none;
+    transition: filter 1.5s ease-out;
+    filter: drop-shadow(0 0 0px rgb(0, 151, 238));
+    animation-play-state: paused;
 }
