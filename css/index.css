@@ -1,10 +1,21 @@
-body{
+body{ /*FONTE DO SITE TODO, Não é recomendavel, mas nesse site aqui não precisa de fontes diferentes mesmo. lol*/
+    font-family: monospace;
     background-color: black;
     margin: 0;
 }
 
-a{ /*FONTE DO SITE TODO, Não é recomendavel, mas nesse site aqui não precisa de fontes diferentes mesmo. lol*/
-    font-family: monospace;
+h1{
+    color: white;
+    text-decoration: none; 
+    font-style: normal;
+    font-size: 4vh;
+}
+
+a{
+    color: white;
+    text-decoration: none; 
+    font-style: normal;
+    font-size: 2.5vh;
 }
 
 /*CSS DO MENU*/
@@ -13,7 +24,7 @@ a{ /*FONTE DO SITE TODO, Não é recomendavel, mas nesse site aqui não precisa 
     justify-content: center;
     align-items: center;
     height: 100vh; /*A TELA TODA, OU SEJA É PRA CENTRALIZAR NO MEIO DA TELA TODA*/
-    gap: 20px; /*ESPAÇAMENTO ENTRE OS DOIS CONTAINERS*/
+    gap: 4vh; /*ESPAÇAMENTO ENTRE OS DOIS CONTAINERS*/
 }
 
 /*CSS DO MENU ESQUERDO*/
@@ -30,8 +41,28 @@ a{ /*FONTE DO SITE TODO, Não é recomendavel, mas nesse site aqui não precisa 
     transition: filter 0.5s ease-in-out; /*EFEITO DO SAIR DA LUZ DE FUNDO*/
 }
 .lateral-esquerda:hover{ /*CSS DA ANIMAÇÃO*/
-    filter: drop-shadow(0 0 10px blue);
+    filter: drop-shadow(0 0 10px white);
     transition: 0.5s; /*TEMPO PRA COMEÇAR A ANIMAÇÃO*/
+}
+
+.lateral-esquerda #perfil{
+    background-color: rgb(20, 20, 20);
+    border: 2px solid white;
+    border-radius: 60%;
+    height: 30%;
+    width: 50%;
+    margin: 0% 2.5vh 2.5vh;
+    transition: filter 0.5 ease-in-out;
+}
+
+.lateral-esquerda #perfil img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 60%;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
 }
 
 .lateral-esquerda button{
@@ -39,27 +70,46 @@ a{ /*FONTE DO SITE TODO, Não é recomendavel, mas nesse site aqui não precisa 
     border: 2px solid white;
     border-radius: 2vh;
     margin: 1vh;
-    height: 12.5%; /*Altura*/
-    width: 60%; /*Largura*/
+    height: 10.5%; /*Altura*/
+    width: 55%; /*Largura*/
     box-sizing: border-box;
     transition: filter 0.5s ease-in-out;
 }
 
-.lateral-esquerda button:hover{
-    filter:drop-shadow(0 0 10px blue);
-    transition: 0.5s;
+#github{
+    background-image: url(../assets/github.png);
+    background-position: 1vh;
+    background-size: 6vh;
+    background-repeat: no-repeat;
 }
 
-.lateral-esquerda button a{
-    color: white;
-    text-decoration: none; 
-    font-style: normal;
-    font-size: 2.5vh;
+#github:hover{
+    filter: brightness(2);
+    filter: drop-shadow(0 0 10px white);
 }
 
-.lateral-esquerda button a:hover{
-    color: blue;
-    transition: 0.5s;
+#linkedin{
+    background-image: url(../assets/linkedin.png);
+    background-position: 1vh;
+    background-size: 6vh;
+    background-repeat: no-repeat;
+}
+
+#linkedin:hover{
+    filter: brightness(2);
+    filter: drop-shadow(0 0 10px white);
+}
+
+#instagram{
+    background-image: url(../assets/instagram.png);
+    background-position: 1vh;
+    background-size: 6vh;
+    background-repeat: no-repeat;
+}
+
+#instagram:hover{
+    filter: brightness(2);
+    filter: drop-shadow(0 0 10px white);
 }
 
 /*CSS DO MENU DIREITO*/
@@ -77,7 +127,7 @@ a{ /*FONTE DO SITE TODO, Não é recomendavel, mas nesse site aqui não precisa 
 }
 
 .menu-principal:hover{ /*CSS DA ANIMAÇÃO*/
-    filter: drop-shadow(0 0 10px blue);
+    filter: drop-shadow(0 0 10px white);
     transition: 0.5s; /*TEMPO PRA COMEÇAR A ANIMAÇÃO*/
 }
 
@@ -93,18 +143,6 @@ a{ /*FONTE DO SITE TODO, Não é recomendavel, mas nesse site aqui não precisa 
 }
 
 .menu-principal button:hover{
-    filter: drop-shadow(0 0 10px blue);
-    transition: 0.5s;
-}
-
-.menu-principal button a{
-    color: white;
-    text-decoration: none; 
-    font-style: normal;
-    font-size: 2.5vh;
-}
-
-.menu-principal button a:hover{
-    color: blue;
+    filter: drop-shadow(0 0 10px white);
     transition: 0.5s;
 }
