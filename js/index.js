@@ -1,0 +1,1 @@
+// var = re-declaravel. , let = declaração unica. , const = 

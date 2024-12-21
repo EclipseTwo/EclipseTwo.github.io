@@ -24,7 +24,7 @@ a{
     justify-content: center;
     align-items: center;
     height: 100vh; /*A TELA TODA, OU SEJA É PRA CENTRALIZAR NO MEIO DA TELA TODA*/
-    gap: 4vh; /*ESPAÇAMENTO ENTRE OS DOIS CONTAINERS*/
+    gap: 10vh; /*ESPAÇAMENTO ENTRE OS DOIS CONTAINERS*/
 }
 
 /*CSS DO MENU ESQUERDO*/
@@ -38,11 +38,29 @@ a{
     border-radius: 5vh;
     height: 75%; /*Altura*/
     width: 25%; /*Largura*/
+    filter: drop-shadow(0 0 10px white);
+    animation: brilho 3s infinite alternate;
+    animation-duration: 750ms;
     transition: filter 0.5s ease-in-out; /*EFEITO DO SAIR DA LUZ DE FUNDO*/
 }
-.lateral-esquerda:hover{ /*CSS DA ANIMAÇÃO*/
-    filter: drop-shadow(0 0 10px white);
-    transition: 0.5s; /*TEMPO PRA COMEÇAR A ANIMAÇÃO*/
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    column-gap: 1vh;
+    padding: 0vh 1.5vh 0vh 1.5vh;
+    margin-bottom: 1vh;
+}
+
+#dev{
+    background-color: black;
+    color: white;
+    border: 2px solid white;
+    border-radius: 1vh;
+    padding: 0% 7% 0% 7%;
+    font-weight: bolder;
 }
 
 .lateral-esquerda #perfil{
@@ -74,6 +92,7 @@ a{
     width: 55%; /*Largura*/
     box-sizing: border-box;
     transition: filter 0.5s ease-in-out;
+    transition: background-color 0.2s ease-in-out;
 }
 
 #github{
@@ -84,8 +103,8 @@ a{
 }
 
 #github:hover{
-    filter: brightness(2);
-    filter: drop-shadow(0 0 10px white);
+    background-color: rgb(50, 50, 50);
+    filter: drop-shadow(0 0 5px white);
 }
 
 #linkedin{
@@ -96,8 +115,8 @@ a{
 }
 
 #linkedin:hover{
-    filter: brightness(2);
-    filter: drop-shadow(0 0 10px white);
+    background-color: rgb(50, 50, 50);
+    filter: drop-shadow(0 0 5px white);
 }
 
 #instagram{
@@ -108,8 +127,8 @@ a{
 }
 
 #instagram:hover{
-    filter: brightness(2);
-    filter: drop-shadow(0 0 10px white);
+    background-color: rgb(50, 50, 50);
+    filter: drop-shadow(0 0 5px white);
 }
 
 /*CSS DO MENU DIREITO*/
@@ -123,12 +142,9 @@ a{
     border-radius: 5vh;
     height: 75%; /*Altura*/
     width: 35%; /*Largura*/
-    transition: filter 0.5s ease-in-out; /*EFEITO DO SAIR DA LUZ DE FUNDO*/
-}
-
-.menu-principal:hover{ /*CSS DA ANIMAÇÃO*/
-    filter: drop-shadow(0 0 10px white);
-    transition: 0.5s; /*TEMPO PRA COMEÇAR A ANIMAÇÃO*/
+    animation: brilho 3s infinite alternate;
+    animation-duration: 750ms;
+    transition: background-color 0.2s ease-in-out;
 }
 
 .menu-principal button{
@@ -140,9 +156,18 @@ a{
     width: 60%; /*Largura*/
     box-sizing: border-box;
     transition: filter 0.5s ease-in-out;
+    transition: background-color 0.2s ease-in-out;
 }
 
 .menu-principal button:hover{
-    filter: drop-shadow(0 0 10px white);
-    transition: 0.5s;
+    background-color: rgb(50, 50, 50);
+    filter: drop-shadow(0 0 5px white);
+}
+
+@keyframes brilho{
+    0%{ filter: drop-shadow(0 0 10px white );}
+
+    50%{filter: drop-shadow(0 0 15px white);}
+
+    100%{filter: drop-shadow(0 0 10px white );}
 }
