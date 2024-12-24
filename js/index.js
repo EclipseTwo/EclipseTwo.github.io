@@ -1,1 +1,1 @@
-// var = re-declaravel. , let = declaração unica. , const = 
+// var = re-declaravel. , let = declaração unica, obdece ao scopo do site. , const = constante, ou seja o valor colocado nela, não vai mudar.
