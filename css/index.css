@@ -61,7 +61,7 @@ h1, a{ color: white; font-size: 3.5vh; }
 #classe{ color: darkred; border: 4px solid darkred; }
 
 #dev:hover{ filter: drop-shadow(0 0 5px white); }
-#classe:hover{ filter: drop-shadow(0 0 5px blue); }
+#classe:hover{ filter: drop-shadow(0 0 5px darkred); }
 
 #perfil img{ border-radius: 50%; height: 100%; width: 100%; }
 #perfil{
@@ -78,6 +78,7 @@ h1, a{ color: white; font-size: 3.5vh; }
     color: white;
     font-weight: bold;
     font-size: 3vh;
+    text-decoration: underline;
     position: absolute;
     top: 23vh;
     left: 21.5vh;
@@ -91,6 +92,7 @@ h1, a{ color: white; font-size: 3.5vh; }
     display: flex;
     visibility: hidden;
     opacity: 0;
+    border-radius: 3vh;
     position: absolute;
     background:  black;
     border: 2px solid white;
@@ -104,7 +106,7 @@ h1, a{ color: white; font-size: 3.5vh; }
     position: absolute;
     left: 1vh;
     font-size: 7vh;
-    color: rgba(85, 12, 12);
+    color: red;
     cursor: pointer;
 }
 

@@ -25,11 +25,6 @@
 # ---- XXXXXX ----
 */
 
-// Constantes
-
-const lore = document.
-alert(lore);
-
 // ##### JS DO APARECER DO SOBRE E MANTER O HOVER #####
 
 // Funções
