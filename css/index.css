@@ -7,6 +7,7 @@
     text-decoration: none; 
     font-style: normal;
     font-family: monospace;
+    font-weight: bold;
 }
 
 body{ background-color: black; }
@@ -42,7 +43,7 @@ h1, a{ color: white; font-size: 3.5vh; }
     flex-direction: row;
     column-gap: 1vh;
     padding: 0vh 1.5vh 0vh 1.5vh;
-    margin-bottom: 1vh;
+    margin-bottom: 4vh;
     cursor: default;
 }
 
@@ -51,33 +52,79 @@ h1, a{ color: white; font-size: 3.5vh; }
     border-radius: 1vh;
     padding: 0% 5% 0% 5%;
     font-weight: bolder;
+    font-size: 4vh;
     transition: filter 0.3s ease-in-out;
 }
 
-#dev{ color: white; border: 2px solid white; }
-#classe{ color: blue; border: 2px solid blue; }
+#criador{ font-size: 4vh; }
+#dev{ color: white; border: 4px solid white; }
+#classe{ color: darkred; border: 4px solid darkred; }
 
 #dev:hover{ filter: drop-shadow(0 0 5px white); }
 #classe:hover{ filter: drop-shadow(0 0 5px blue); }
 
-
-.menu-esquerdo #perfil{
-    border: 2px solid white;
+#perfil img{ border-radius: 50%; height: 100%; width: 100%; }
+#perfil{
+    border: 1px solid black;
     border-radius: 50%;
-    height: 30%;
-    width: 50%;
+    height: 25vh;
+    width: 25vh;
     margin: 0% 2.5vh 2.5vh;
-    transition: filter 0.5 ease-in-out;
+    transition: filter 0.3s ease-in-out;
 }
 
-.menu-esquerdo #perfil img{
+#sobre{
+    background: none;
+    color: white;
+    font-weight: bold;
+    font-size: 3vh;
+    position: absolute;
+    top: 23vh;
+    left: 21.5vh;
+    cursor: pointer;
+}
+
+#foto{ transition: filter 0.3s ease-in-out; cursor: pointer; }
+#foto:hover{ filter: blur(0.3vh) drop-shadow(0 0 10px white) brightness(0.3); }
+
+#janela{
     display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    background:  black;
+    border: 2px solid white;
+    height: 45%;
+    width: 50%;
+}
+
+#fechar{
+    visibility:hidden;
+    opacity: 0;
+    position: absolute;
+    left: 1vh;
+    font-size: 7vh;
+    color: rgba(85, 12, 12);
+    cursor: pointer;
+}
+
+#escurecer{
+    visibility: hidden;
+    opacity: 0;
+    background-color: black;
+    position: absolute;
     height: 100%;
     width: 100%;
-    object-fit: cover;
+    filter: opacity(0.7);
+}
+
+#janela h2{
+    color: white;
+    position: sticky;
+    font-size: 2.8vh;
+    margin: 3.7vh;
+    text-align: justify;
+    align-self: center;
 }
 
 .menu-esquerdo button, .menu-direito button{
