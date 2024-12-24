@@ -1,50 +1,41 @@
-body{ /*FONTE DO SITE TODO, Não é recomendavel, mas nesse site aqui não precisa de fontes diferentes mesmo. lol*/
-    font-family: monospace;
-    background-color: black;
+*{
     margin: 0;
-}
-
-h1{
-    color: white;
+    padding: 0;
+    border: 0;
+    outline: none;
+    box-sizing: border-box;
     text-decoration: none; 
     font-style: normal;
-    font-size: 4vh;
+    font-family: monospace;
 }
 
-a{
-    color: white;
-    text-decoration: none; 
-    font-style: normal;
-    font-size: 2.5vh;
-}
+body{ background-color: black; }
+h1, a{ color: white; font-size: 3.5vh; }
 
-/*CSS DO MENU*/
-.menu{ /*CSS DO CONTAINER*/
+.menu{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh; /*A TELA TODA, OU SEJA É PRA CENTRALIZAR NO MEIO DA TELA TODA*/
-    gap: 10vh; /*ESPAÇAMENTO ENTRE OS DOIS CONTAINERS*/
+    height: 100vh;
+    gap: 10vh; /*Espaçamento entre os dois menus*/
 }
 
-/*CSS DO MENU ESQUERDO*/
-.lateral-esquerda{ /*CSS DA LATERAL ESQUERDA COM A HOVER EMBAIXO*/
+.menu-esquerdo, .menu-direito{
+    background-image: url('../assets/background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-color: rgb(20, 20, 20);
     border: 2px solid white;
     border-radius: 5vh;
-    height: 75%; /*Altura*/
-    width: 25%; /*Largura*/
-    filter: drop-shadow(0 0 10px white);
-    animation: brilho 3s infinite alternate;
-    animation-duration: 750ms;
-    transition: filter 0.5s ease-in-out; /*EFEITO DO SAIR DA LUZ DE FUNDO*/
 }
 
-.container{
+.menu-esquerdo{ height: 75%; /*Altura*/ width: 25%; /*Largura*/ animation: brilho 3s infinite alternate; animation-duration: 750ms; }
+.menu-direito{ height: 75%; /*Altura*/ width: 35%; /*Largura*/ animation: brilho 3s infinite alternate; animation-duration: 750ms; }
+
+.container{ /* Ele é o container do nome, classe e dev */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -52,39 +43,47 @@ a{
     column-gap: 1vh;
     padding: 0vh 1.5vh 0vh 1.5vh;
     margin-bottom: 1vh;
+    cursor: default;
 }
 
-#dev{
+#dev, #classe{
     background-color: black;
-    color: white;
-    border: 2px solid white;
     border-radius: 1vh;
-    padding: 0% 7% 0% 7%;
+    padding: 0% 5% 0% 5%;
     font-weight: bolder;
+    transition: filter 0.3s ease-in-out;
 }
 
-.lateral-esquerda #perfil{
-    background-color: rgb(20, 20, 20);
+#dev{ color: white; border: 2px solid white; }
+#classe{ color: blue; border: 2px solid blue; }
+
+#dev:hover{ filter: drop-shadow(0 0 5px white); }
+#classe:hover{ filter: drop-shadow(0 0 5px blue); }
+
+
+.menu-esquerdo #perfil{
     border: 2px solid white;
-    border-radius: 60%;
+    border-radius: 50%;
     height: 30%;
     width: 50%;
     margin: 0% 2.5vh 2.5vh;
     transition: filter 0.5 ease-in-out;
 }
 
-.lateral-esquerda #perfil img{
+.menu-esquerdo #perfil img{
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 60%;
+    border-radius: 50%;
     height: 100%;
     width: 100%;
     object-fit: cover;
 }
 
-.lateral-esquerda button{
-    background-color: rgb(20, 20, 20);
+.menu-esquerdo button, .menu-direito button{
+    background: none;
+    background-size: cover;
+    background-repeat: no-repeat;
     border: 2px solid white;
     border-radius: 2vh;
     margin: 1vh;
@@ -93,76 +92,24 @@ a{
     box-sizing: border-box;
     transition: filter 0.5s ease-in-out;
     transition: background-color 0.2s ease-in-out;
+    cursor: pointer;
 }
 
-#github{
-    background-image: url(../assets/github.png);
+#github, #linkedin, #instagram{
     background-position: 1vh;
     background-size: 6vh;
     background-repeat: no-repeat;
 }
 
-#github:hover{
+#github:hover, #linkedin:hover, #instagram:hover, .menu-direito button:hover{
     background-color: rgb(50, 50, 50);
     filter: drop-shadow(0 0 5px white);
 }
 
-#linkedin{
-    background-image: url(../assets/linkedin.png);
-    background-position: 1vh;
-    background-size: 6vh;
-    background-repeat: no-repeat;
-}
-
-#linkedin:hover{
-    background-color: rgb(50, 50, 50);
-    filter: drop-shadow(0 0 5px white);
-}
-
-#instagram{
-    background-image: url(../assets/instagram.png);
-    background-position: 1vh;
-    background-size: 6vh;
-    background-repeat: no-repeat;
-}
-
-#instagram:hover{
-    background-color: rgb(50, 50, 50);
-    filter: drop-shadow(0 0 5px white);
-}
-
-/*CSS DO MENU DIREITO*/
-.menu-principal{ /*CSS DO MENU PRINCIPAL COM A HOVER EMBAIXO*/
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    background-color: rgb(20, 20, 20);
-    border: 2px solid white;
-    border-radius: 5vh;
-    height: 75%; /*Altura*/
-    width: 35%; /*Largura*/
-    animation: brilho 3s infinite alternate;
-    animation-duration: 750ms;
-    transition: background-color 0.2s ease-in-out;
-}
-
-.menu-principal button{
-    background-color: rgb(20, 20, 20);
-    border: 2px solid white;
-    border-radius: 2vh;
-    margin: 1vh;
-    height: 12.5%; /*Altura*/
-    width: 60%; /*Largura*/
-    box-sizing: border-box;
-    transition: filter 0.5s ease-in-out;
-    transition: background-color 0.2s ease-in-out;
-}
-
-.menu-principal button:hover{
-    background-color: rgb(50, 50, 50);
-    filter: drop-shadow(0 0 5px white);
-}
+#github{ background-image: url(../assets/github.png); }
+#linkedin{ background-image: url(../assets/linkedin.png); }
+#instagram{ background-image: url(../assets/instagram.png); }
+.a-insta { margin-left: 10%; }
 
 @keyframes brilho{
     0%{ filter: drop-shadow(0 0 10px white );}
